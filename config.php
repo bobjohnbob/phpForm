@@ -1,7 +1,7 @@
 <?php
 //This is the only required setting.  Replace the email address below 
 //with the email address you'd like to receive the forms at.
-$sendToEmail = 'bobjohnbob@gmail.com';
+$sendToEmail = 'your@email.com';
 
 //------------EVERYTHING BELOW THIS POINT IS OPTIONAL---------------
 
