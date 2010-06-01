@@ -1,2 +1,4 @@
-The {adjective1} {adjective2} {animal1} {verb} over the {adjective3} {animal2}.
+New form submition from {email}
+
+{phpfEVERYTHING}
 

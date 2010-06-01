@@ -2,6 +2,32 @@
 
 require_once('config.php');
 
+function templateLogic($matches)
+{
+	$temp = trim($matches[0], "{}");
+
+	if(isset($_POST[$temp]))
+	{
+		return $_POST[$temp];
+	}
+	elseif($temp == "phpfEVERYTHING")
+	{
+		foreach($_POST as $key => $value)
+		{
+			if($key == "recaptcha_challenge_field" 
+				|| $key == "recaptcha_response_field")
+			{
+				continue;
+			}
+			$everything .= $key.": ".$value."<br>\n";
+		}
+
+		return $everything;
+ 	}
+	
+	return "{TEMPLATE FIELD NOT SPECIFIED}";
+}
+
 
 if($recaptchaEnabled)
 {
@@ -48,12 +74,7 @@ $pattern = "/\{([a-zA-Z0-9_]+)\}/i";
 foreach($template as $line)
 {
 	$emailBody .= preg_replace_callback(
-		$pattern, create_function(
-			'$matches', 
-			'$temp = trim($matches[0], "{}");'.
-			'if(isset($_POST[$temp])){'.
-				'return $_POST[$temp];}'.
-			'echo $_POST[$temp]; return "{NOT SPECIFIED}";'), 
+		$pattern, "templateLogic", 
 		$line);
 }
 

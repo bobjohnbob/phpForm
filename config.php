@@ -6,6 +6,8 @@ $sendToEmail = 'your@email.com';
 //------------EVERYTHING BELOW THIS POINT IS OPTIONAL---------------
 
 //This is the name of the file to use when no template is passed.
+//Useful if you're pointing multiple contacts to the same form.
+
 $templateFile = 'template.txt'; //Default is template.txt
 
 //This is the default page that should show after the information is submitted.

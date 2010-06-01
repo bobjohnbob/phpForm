@@ -1,0 +1,8 @@
+#ignore html files that are used for form testing.
+*.htm
+*.html
+
+#ignore shell scripts (I have one setup to rsync changed
+#files to my hosting account for testing.)
+
+*.sh
