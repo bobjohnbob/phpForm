@@ -8,20 +8,21 @@ this script, I had 2 major goals.
 1. Little-to-no configuration.
 ------------------------------
 
-        The only necessary configuration in the script is to set your email
-        address you would like to receive the emails at.  There are other
-        configuration options if you would like to have extra features (like a
-        redirect page or captcha spam protection) but you CAN just create an
-        email template and point a form action to the script and it will send 
-        you emails.
+The only necessary configuration in the script is to set your email
+address you would like to receive the emails at.  There are other
+configuration options if you would like to have extra features (like a
+redirect page or captcha spam protection) but you CAN just set your email
+address in the config(config.php), point your form to the script 
+(<form action='./process.php'>) and it will send you all data from the
+sctipt in an email.emails.
 
 2. Compatability
 ----------------
 
-        I wanted this script to be compatible with as many servers as possible
-        with out having to make any server side settings.  This is why I wrote 
-        it in php, instead of python.  With most hosts, you will already have
-        php and sendmail installed, configured and ready to go.
+I wanted this script to be compatible with as many servers as possible
+with out having to make any server side settings.  This is why I wrote 
+it in php, instead of python.  With most hosts, you will already have
+php and sendmail installed, configured and ready to go.
 
 The basic setup
 ===============
